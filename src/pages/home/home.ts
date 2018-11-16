@@ -24,7 +24,7 @@ export class HomePage {
 
   showMenuItems(){
     this.showMenuItem = this.fab._listsActive;
-    
+     
     this.renderer.setElementClass(this.container.nativeElement, "show", this.showMenuItem);
     let i = 1;
     var localLabel = this.showMenuItem ? this.labels.toArray().reverse() : this.labels.toArray();
