@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-footer>
+  hello
+</ion-footer>
+
+
+<ion-content padding>
+  <h2>Welcome to Ionic!</h2>
+  <p>
+    This starter project comes with simple tabs-based layout for apps
+    that are going to primarily use a Tabbed UI.
+  </p>
+
+
+  <ion-fab bottom right (click)="showMenuItems()" #fab>
+    <button ion-fab mini ><ion-icon name="add"></ion-icon></button>
+    
+    <ion-fab-list side="top">
+      <button ion-fab (click)="alertMe('Facebook')"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab (click)="alertMe('Twitter')"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab (click)="alertMe('Vimeo')"><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab (click)="alertMe('Google +')"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <a class="labelContainer" (click)="hideMenuFab()" #container> 
+    <div class="container">
+      <a><div #label class="label">Google +</div></a>
+      <a><div #label class="label">Vimeo</div></a>
+      <a><div #label class="label">Twitter</div></a>
+      <a><div #label class="label">Facebook</div></a>
+    </div>
+  </a>
+
+</ion-content>
+
